@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Classes/">
+    <Project Path="Classes_introductions/Classes_introductions.csproj" />
+  </Folder>
+  <Folder Name="/methods/">
+    <Project Path="Methods_intro/Methods_intro.csproj" />
+    <Project Path="task2 training/task2 training.csproj" />
+  </Folder>
+</Solution>

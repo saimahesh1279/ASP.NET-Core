@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EntityFrameWoekCore.Domain/EntityFrameWorkCore.Domain.csproj" />
+  <Project Path="EntityFrameWorkCore.ConsoleApp/EntityFrameWorkCore.ConsoleApp.csproj" Id="b3edc57f-7da4-4ca2-8208-16e013bd9e33" />
+  <Project Path="EntityFrameWorkCore.Data/EntityFrameWorkCore.Data.csproj" />
+</Solution>
