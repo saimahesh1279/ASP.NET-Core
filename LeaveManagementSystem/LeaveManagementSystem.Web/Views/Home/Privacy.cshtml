@@ -2,76 +2,78 @@
     ViewData["Title"] = "Privacy Policy";
 }
 
-<div class="row justify-content-center">
-    <div class="col-lg-10">
-        <div class="text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary mb-3">Leave Management System</span>
-            <h1 class="display-4 fw-semibold">@ViewData["Title"]</h1>
-            <p class="lead text-muted mb-0">
-                Clear information about how your employee and leave details are handled.
-            </p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h2 class="h4">Information we collect</h2>
-                        <p class="text-muted mb-0">
-                            We collect the information needed to manage your account and leave requests, such as your
-                            name, employee details, leave balance, request history, and approval comments.
-                        </p>
-                    </div>
-                </div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <div class="text-center mb-5">
+                <span class="eyebrow">Leave Management System</span>
+                <h1 class="display-5 fw-bold section-title">@ViewData["Title"]</h1>
+                <p class="lead text-muted mb-0">
+                    Clear information about how your employee and leave details are handled.
+                </p>
             </div>
 
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h2 class="h4">How we use it</h2>
-                        <p class="text-muted mb-0">
-                            Information is used to submit and approve leave, calculate available balances, notify the
-                            appropriate managers, and keep an accurate record of time off.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h2 class="h4">Who can access it</h2>
-                        <p class="text-muted mb-0">
-                            Access is limited by role. Employees can view their own details, while authorized managers
-                            and administrators can access the information required for their responsibilities.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4 p-md-5">
-                        <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
-                            <div>
-                                <h2 class="h4">Keeping your information secure</h2>
-                                <p class="text-muted mb-0">
-                                    We use reasonable administrative, technical, and organizational safeguards to help
-                                    protect employee and leave information from unauthorized access or disclosure.
-                                </p>
-                            </div>
-                            <div class="text-md-end text-muted flex-shrink-0">
-                                <small>Last updated</small>
-                                <div class="fw-semibold">January 2026</div>
-                            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="lms-card lms-card-accent accent-indigo h-100">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold">Information we collect</h2>
+                            <p class="text-muted mb-0">
+                                We collect the information needed to manage your account and leave requests, such as your
+                                name, employee details, leave balance, request history, and approval comments.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="alert alert-light border mt-4 mb-0" role="note">
-                    If your information is inaccurate or you have questions about this policy, contact your system
-                    administrator or the person responsible for privacy at your organization. This policy may be
-                    updated as the system and organizational requirements change.
+                <div class="col-md-6 col-lg-4">
+                    <div class="lms-card lms-card-accent accent-cyan h-100">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold">How we use it</h2>
+                            <p class="text-muted mb-0">
+                                Information is used to submit and approve leave, calculate available balances, notify the
+                                appropriate managers, and keep an accurate record of time off.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="lms-card lms-card-accent accent-amber h-100">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold">Who can access it</h2>
+                            <p class="text-muted mb-0">
+                                Access is limited by role. Employees can view their own details, while authorized managers
+                                and administrators can access the information required for their responsibilities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="lms-card security-card">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+                                <div>
+                                    <h2 class="h4 fw-bold text-white">Keeping your information secure</h2>
+                                    <p class="mb-0 text-white-50">
+                                        We use reasonable administrative, technical, and organizational safeguards to help
+                                        protect employee and leave information from unauthorized access or disclosure.
+                                    </p>
+                                </div>
+                                <div class="text-md-end text-white flex-shrink-0">
+                                    <small class="text-white-50">Last updated</small>
+                                    <div class="fw-semibold">January 2026</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info border-0 rounded-4 mt-4 mb-0" role="note">
+                        If your information is inaccurate or you have questions about this policy, contact your system
+                        administrator or the person responsible for privacy at your organization. This policy may be
+                        updated as the system and organizational requirements change.
+                    </div>
                 </div>
             </div>
         </div>

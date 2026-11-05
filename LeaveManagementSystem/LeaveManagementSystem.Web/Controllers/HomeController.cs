@@ -15,7 +15,10 @@ namespace LeaveManagementSystem.Web.Controllers
         {
             return View();
         }
-
+        public IActionResult LeaveType()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();
@@ -24,11 +27,11 @@ namespace LeaveManagementSystem.Web.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            var Model = new ErrorViewModel {
-                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
-            };
-
-            return View(Model);
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id
+                             ?? HttpContext.TraceIdentifier
+            });
         }
     }
 }

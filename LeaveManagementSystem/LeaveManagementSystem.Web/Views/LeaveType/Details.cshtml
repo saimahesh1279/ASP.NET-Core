@@ -1,0 +1,88 @@
+@* @model LeaveManagementSystem.Web.Data.LeaveType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LeaveType</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LeaveTypeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LeaveTypeName)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfDays)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfDays)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+    </dl>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LeaveId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+            @model LeaveManagementSystem.Web.Data.LeaveType
+
+@{
+    ViewData["Title"] = "Leave Type Details";
+}
+
+<section class="lms-page-header">
+    <div class="container">
+        <span class="eyebrow">Details</span>
+        <h1 class="lms-page-title">@Model.LeaveTypeName</h1>
+        <p class="lms-page-subtitle">Full details for this leave type.</p>
+    </div>
+</section>
+
+<div class="container pb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="lms-form-card">
+                <dl class="row g-3 mb-0">
+                    <dt class="col-sm-4 text-muted">Leave Type</dt>
+                    <dd class="col-sm-8 fw-semibold mb-0">@Model.LeaveTypeName</dd>
+
+                    <dt class="col-sm-4 text-muted">Number of Days</dt>
+                    <dd class="col-sm-8 mb-0"><span class="stat-badge badge-indigo">@Model.NumberOfDays days</span></dd>
+
+                    <dt class="col-sm-4 text-muted">From Date</dt>
+                    <dd class="col-sm-8 mb-0">@Model.FromDate.ToString("dd MMM yyyy")</dd>
+
+                    <dt class="col-sm-4 text-muted">To Date</dt>
+                    <dd class="col-sm-8 mb-0">@Model.ToDate.ToString("dd MMM yyyy")</dd>
+                </dl>
+
+                <hr class="my-4" />
+
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-gradient" asp-action="Edit" asp-route-id="@Model.LeaveId">Edit</a>
+                    <a class="btn btn-outline-secondary" asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+@model IEnumerable<LeaveManagementSystem.Web.Data.LeaveType>
+
+@{
+    ViewData["Title"] = "Leave Types";
+}
+
+<section class="lms-page-header">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+        <div>
+            <span class="eyebrow">Leave Setup</span>
+            <h1 class="lms-page-title">Leave Types</h1>
+            <p class="lms-page-subtitle">Define the leave categories your team can apply for.</p>
+        </div>
+        <a class="btn btn-gradient btn-lg" asp-action="Create">+ New Leave Type</a>
+    </div>
+</section>
+
+<div class="container pb-5">
+    <div class="lms-table-card">
+        @if (!Model.Any())
+        {
+            <div class="lms-empty">
+                <h4 class="text-indigo">No leave types yet</h4>
+                <p class="mb-0">Create your first leave type to get started.</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table lms-table">
+                    <thead>
+                        <tr>
+                            <th>Leave Type</th>
+                            <th>Days</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@item.LeaveTypeName</td>
+                                <td><span class="stat-badge badge-indigo">@item.NumberOfDays days</span></td>
+                                <td>@item.FromDate.ToString("dd MMM yyyy")</td>
+                                <td>@item.ToDate.ToString("dd MMM yyyy")</td>
+                                <td class="text-end">
+                                    <a class="lms-action-link lms-action-details" asp-action="Details" asp-route-id="@item.LeaveId">Details</a>
+                                    <a class="lms-action-link lms-action-edit" asp-action="Edit" asp-route-id="@item.LeaveId">Edit</a>
+                                    <a class="lms-action-link lms-action-delete" asp-action="Delete" asp-route-id="@item.LeaveId">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

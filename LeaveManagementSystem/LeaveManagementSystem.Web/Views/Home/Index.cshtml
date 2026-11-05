@@ -1,8 +1,107 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="hero-section">
+    <div class="container hero-container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7 text-center text-lg-start">
+                <span class="eyebrow">Smarter HR Workflows</span>
+                <h1>Leave Management That Feels Effortless</h1>
+                <p class="hero-description mx-auto mx-lg-0">
+                    Streamline requests, approvals, balances, and reporting in one sleek dashboard
+                    built for employees, managers, and HR teams.
+                </p>
+
+                <div class="hero-actions justify-content-center justify-content-lg-start">
+                    <a class="btn btn-gradient btn-lg" asp-controller="Leave" asp-action="Create">Request Leave</a>
+                    <a class="btn btn-outline-primary btn-lg" href="#features">Explore Platform</a>
+                    <a class="btn btn-outline-secondary btn-lg" asp-controller="Pricing" asp-action="Index">See Pricing</a>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <strong>98<span>%</span></strong>
+                        <small>Approval transparency</small>
+                    </div>
+                    <div class="stat-item">
+                        <strong>42<span>%</span></strong>
+                        <small>Hours saved monthly</small>
+                    </div>
+                    <div class="stat-item">
+                        <strong>300<span>+</span></strong>
+                        <small>Teams onboarded</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="overview-card">
+                    <div class="overview-heading">
+                        <span>This Week</span>
+                        <h2>Leave Overview</h2>
+                    </div>
+
+                    <div class="balance-item">
+                        <div class="balance-label">
+                            <span>Annual Leave</span>
+                            <span>14 / 20 days</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Annual leave used" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar annual-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div class="balance-item">
+                        <div class="balance-label">
+                            <span>Sick Leave</span>
+                            <span>2 / 10 days</span>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Sick leave used" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar sick-progress" style="width: 20%"></div>
+                        </div>
+                    </div>
+
+                    <div class="pending-row">
+                        <span>Pending Requests</span>
+                        <strong>03</strong>
+                    </div>
+                    <a class="btn btn-gradient w-100 queue-button" asp-controller="Leave" asp-action="Index">View Queue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-section" id="features">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Everything your team needs</h2>
+            <p class="text-muted mb-0">Built around the three things that matter most in leave management.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <article class="feature-card">
+                    <span class="feature-kicker kicker-indigo">Workflow</span>
+                    <h3>Simple leave requests</h3>
+                    <p>Give employees a clear way to submit requests and track every approval.</p>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <article class="feature-card">
+                    <span class="feature-kicker kicker-emerald">Planning</span>
+                    <h3>Better team planning</h3>
+                    <p>Keep leave balances and team availability visible in one place.</p>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <article class="feature-card">
+                    <span class="feature-kicker kicker-amber">Compliance</span>
+                    <h3>Reliable records</h3>
+                    <p>Maintain organized leave history and make reporting easier for HR.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
